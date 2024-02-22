@@ -10,7 +10,7 @@
   </approach>
 
   <!-- Cruise configuration -->
-  <cruise speed="156" alt="6000" fuel="0.375">
+  <cruise speed="196" alt="6000" fuel="0.375">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
