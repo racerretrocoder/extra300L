@@ -14,6 +14,17 @@
 		</offsets>
 	</model>
 
+
+  <model>
+		
+		<name>comm</name>
+		<path>Aircraft/Instruments-3d/standby-adi/stdby-adi.xml</path>
+		<offsets>
+			<x-m>0.029</x-m>
+			<y-m> 0</y-m>
+			<z-m>0.160</z-m>
+		</offsets>
+	</model>
    <model>
     <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Altimetre/altimetre.xml</path>
     <offsets>

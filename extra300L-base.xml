@@ -38,7 +38,9 @@
       <generic> 
         <int type="bool" n="6"> 0 </int>                                             <!-- 6 smoke -->
         <int type="int" n="7">  0 </int>                                             <!-- 7 color -->
-        <float n="3" alias="/position/altitude-ft"> 0 </float>                       <!-- altitude for Smoke/Trail -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>
+               <float n="0" alias="/sim/model/door-positions/crew/position-norm">1</float>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>                      <!-- altitude for Smoke/Trail -->
       </generic>
     </multiplay>
 
@@ -170,6 +172,9 @@
 <ar6201>
 			<file>Aircraft/Instruments-3d/ar-6201/ar6201emod.nas</file>
 		</ar6201>
+    <doors>
+      <file>Aircraft/extra300L/Nasal/doors.nas</file>
+    </doors>
 </nasal>
    
 </PropertyList>

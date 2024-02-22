@@ -12,11 +12,13 @@
     -->
     <![CDATA[
       var livery_update = aircraft.livery_update.new("Aircraft/extra300L/Models/Liveries");
+
     ]]>
     </load>
   
   <unload><![CDATA[
     livery_update.stop();
+
   ]]></unload>
 </nasal>
 
@@ -36,6 +38,7 @@
     </offsets>
   </model>
 
+
    <!-- Interieur -->
   <model>
     <path>Aircraft/extra300L/Models/Interior/interior.xml</path>
@@ -48,6 +51,56 @@
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
+
+<effect>
+  <inherits-from>Aircraft/extra300L/Models/Effects/glass/glass</inherits-from>
+  <parameters>
+    <!--<rendering-hint>transparent</rendering-hint>
+    <transparent>true</transparent>
+    <render-bin>
+      <bin-number>111</bin-number>
+      <bin-name>DepthSortedBin</bin-name>
+    </render-bin>-->
+  </parameters>
+<object-name>verriere-int</object-name>
+<object-name>verriere</object-name>
+ </effect>
+
+ <effect>
+  <inherits-from>Effects/model-combined-transparent</inherits-from>
+  <parameters>
+    <rain-enabled>1</rain-enabled>
+    <normalmap-enabled type="int">0</normalmap-enabled>
+    <lightmap-enabled type="int">0</lightmap-enabled>
+    <reflection-enabled type="int">1</reflection-enabled>
+    <reflection-correction type="float">1</reflection-correction>
+    <reflect-map-enabled type="int">0</reflect-map-enabled>
+    <reflection-fresnel type="float">0.3</reflection-fresnel>
+    <reflection-rainbow type="float">0.2</reflection-rainbow>
+    <reflection-noise type="float">0.0</reflection-noise>
+    <reflection-dynamic type="int">1</reflection-dynamic>
+      <texture n= "5" >
+        <type>cubemap</type>
+        <images>
+          <positive-x>Aircraft/Generic/Effects/fgfs-sky2/1.png</positive-x>
+          <negative-x>Aircraft/Generic/Effects/fgfs-sky2/4.png</negative-x>
+          <positive-y>Aircraft/Generic/Effects/fgfs-sky2/2.png</positive-y>
+          <negative-y>Aircraft/Generic/Effects/fgfs-sky2/3.png</negative-y>
+          <positive-z>Aircraft/Generic/Effects/fgfs-sky2/6.png</positive-z>
+          <negative-z>Aircraft/Generic/Effects/fgfs-sky2/5.png</negative-z>
+        </images>
+      </texture>
+    <ambient-correction type="float">0.2</ambient-correction>
+    <transparent>true</transparent>
+    <render-bin>
+      <bin-number>111</bin-number>
+      <bin-name>DepthSortedBin</bin-name>
+    </render-bin>
+  </parameters>
+<object-name>verriere-int</object-name>
+
+  <!--<object-name>cylinder.007</object-name>-->       <!-- HUD -->
+ </effect>
 
 <effect>
        <inherits-from>Effects/model-transparent</inherits-from>
@@ -261,7 +314,7 @@
       <repeatable>false</repeatable>  
       <binding>
         <command>nasal</command>
-        <script>doors.doorsystem.crewexport();</script>
+        <script>doors.crew.toggle();</script>
       </binding>
     </action>
   </animation>
@@ -269,15 +322,17 @@
   <animation>
     <type>rotate</type>
     <object-name>porte</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
-    <factor> -140 </factor>
+<object-name>verriere-int</object-name>
+<object-name>verriere</object-name>
+    <property>sim/multiplay/generic/float[0]</property>
+       <factor> -95 </factor>
     <axis>
-      <x1-m>  0.2046 </x1-m>
-      <y1-m>  0.3333 </y1-m>
-      <z1-m>  0.2336 </z1-m>
-      <x1-m> -0.9579 </x1-m>
-      <y2-m>  0.3906 </y2-m>
-      <z2-m>  0.2345 </z2-m>
+      <x1-m> -1.059 </x1-m>
+      <y1-m>  0.338 </y1-m>
+      <z1-m>  0.123 </z1-m>
+      <x2-m> -0.217 </x2-m>
+      <y2-m>  0.370 </y2-m>
+      <z2-m>  0.270 </z2-m>
     </axis>
   </animation>
 
