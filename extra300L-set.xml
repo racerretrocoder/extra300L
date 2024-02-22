@@ -12,6 +12,7 @@
       <generic>
         
         <int n="6" alias="/controls/switches/smoke">0</int> <!-- 6 smoke -->
+        <float n="7" alias="/engines/engine/rpm">0</float> <!-- RPM -->
         
       </generic>
     </multiplay>

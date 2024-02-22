@@ -105,6 +105,36 @@
       <z-m>   0.0133   </z-m>
     </offsets>
   </model>
+
+<animation>
+    <type>rotate</type>
+    <object-name>switch.018</object-name>
+    <property>/controls/switches/strobe-lights</property>
+    <factor> -10 </factor>
+    <axis>
+      <x>  -0.1 </x>
+      <y> 1 </y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>switch.018</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/strobe-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
+  </animation>
   
    <!-- position des instruments
   badin : 0.025 -0.099 0.150

@@ -74,7 +74,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NeedleF</object-name>
-    <property>fdm/jsbsim/propulsion/engine/fuel-flow-rate-gph</property>
+    <property>engines/engine[0]/fuel-flow-gph</property>
     <interpolation>
       <entry><ind>  0 </ind><dep>   0 </dep></entry>
       <entry><ind> 10 </ind><dep>  18 </dep></entry>
@@ -90,6 +90,7 @@
       <z>  0 </z>
     </axis>
   </animation>
+
 <animation>
     <type>material</type>
  <object-name>Fond</object-name>
