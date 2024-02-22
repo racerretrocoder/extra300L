@@ -5,6 +5,8 @@
  # EXTRA300L by PAF team
  # April 2016 : Modified by PAF team
  # http://equipe-flightgear.forumactif.com
+ #
+ # Febuary 2024: Modd's by Phoenix
 
 ##########################################-->
 
@@ -13,7 +15,7 @@
 <PropertyList>
 
   <sim include="views.xml">
-    <aircraft-version>0.1</aircraft-version>
+    <aircraft-version>2</aircraft-version>
     <status>Alpha</status>
     <fuel-fraction>1.0</fuel-fraction>
 	
@@ -38,6 +40,7 @@
       <generic> 
         <int type="bool" n="6"> 0 </int>                                             <!-- 6 smoke -->
         <int type="int" n="7">  0 </int>                                             <!-- 7 color -->
+    
         <float n="3" alias="/position/altitude-ft"> 0 </float>
                <float n="0" alias="/sim/model/door-positions/crew/position-norm">1</float>
         <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>                      <!-- altitude for Smoke/Trail -->
@@ -51,6 +54,7 @@
       <max-lb>200</max-lb>
     </weight>
    <controls>
+
       <smoke type="bool">0</smoke>
       <switches>
       <smoke type="bool">0</smoke>
@@ -86,14 +90,7 @@
     </keyboard>
   </input>
 
-  <nasal>
-    <extra300LCommon>      
-    <file>Aircraft/extra300L/Nasal/interpolate.nas</file>
-    </extra300LCommon>
-<ar6201>
-			<file>Aircraft/Instruments-3d/ar-6201/ar6201emod.nas</file>
-		</ar6201>
-  </nasal>
+
 
   <help>
       <title>EXTRA300 L-Model</title>
@@ -140,6 +137,19 @@
 </instrumentation>
 
 </sim>
+<controls>
+ <lighting>
+    <instrument-lights type="bool">false</instrument-lights>
+    <nav-lights type="bool">false</nav-lights>
+    <taxi-lights type="bool">false</taxi-lights>
+    <strobe-lights type="bool">false</strobe-lights>
+    <landing-lights type="bool">false</landing-lights>
+    <luminosite-lights type="float">2</luminosite-lights>
+    <floods-lights type="float">1.5</floods-lights>
+    <instruments-norm>1</instruments-norm>
+    <panel-norm>1</panel-norm>
+  </lighting>
+</controls>
 
 <instrumentation>
 		<altimeter n="1">
@@ -175,6 +185,13 @@
     <doors>
       <file>Aircraft/extra300L/Nasal/doors.nas</file>
     </doors>
+<lights>
+      <file>Aircraft/extra300L/Nasal/light.nas</file>
+</lights>
+
+        <dual_control_tools>
+            <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+        </dual_control_tools>
 </nasal>
    
 </PropertyList>

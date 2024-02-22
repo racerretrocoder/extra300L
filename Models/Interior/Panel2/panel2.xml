@@ -14,7 +14,7 @@
 		</offsets>
 	</model>
 
-
+<!--
   <model>
 		
 		<name>comm</name>
@@ -24,7 +24,7 @@
 			<y-m> 0</y-m>
 			<z-m>0.160</z-m>
 		</offsets>
-	</model>
+	</model> -->
    <model>
     <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Altimetre/altimetre.xml</path>
     <offsets>
@@ -120,7 +120,7 @@
 <animation>
     <type>rotate</type>
     <object-name>switch.018</object-name>
-    <property>/controls/switches/strobe-lights</property>
+    <property>/controls/lighting/strobe-lights</property>
     <factor> -10 </factor>
     <axis>
       <x>  -0.1 </x>
@@ -138,7 +138,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/strobe-lights</property>
+        <property>/controls/lighting/strobe-lights</property>
       </binding>
       <binding>
         <command>property-toggle</command>
@@ -146,8 +146,48 @@
       </binding>
     </action>
   </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>switch.014</object-name>
+    <property>/controls/lighting/nav-lights</property>
+    <factor> -10 </factor>
+    <axis>
+      <x>  -0.1 </x>
+      <y> 1 </y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>switch.014</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/nav-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
+    </action>
   
-   <!-- position des instruments
+  </animation>
+<animation>
+    <type>select</type>
+    <object-name>LVW</object-name>
+    <condition>
+     <greater-than>
+<property>/systems/electrical/suppliers/alternator</property>
+<value>12</value>
+</greater-than>
+    </condition>
+  </animation>  
+
+ <!-- position des instruments
   badin : 0.025 -0.099 0.150
   alti  : 0.017  0.091 0.150
   vario : 0.025 -0.099 0.069

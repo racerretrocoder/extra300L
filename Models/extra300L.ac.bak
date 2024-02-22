@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite.001" rgb 1 1 1  amb 1 1 1  emis 0.1 0.1 0.1  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 0.478947 0.473684 0.489474  amb 0 0 0  emis 0.1 0.1 0.1  spec 1 1 1  shi 128  trans 0.742105
+MATERIAL "transparent" rgb 0.778947 0.784211 0.784211  amb 0 0 0  emis 0.1 0.1 0.1  spec 1 1 1  shi 128  trans 0.868421
 OBJECT world
 kids 25
 OBJECT poly
@@ -43405,7 +43405,7 @@ refs 4
 kids 0
 OBJECT poly
 name "verriere"
-loc 0.086592 0.735349 0
+loc 0.00427131 0.00939155 0
 data 8
 verriere
 crease 34.000000

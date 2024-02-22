@@ -7,12 +7,14 @@
 
     <description>Extra 300L</description>
     <author>Laille Alexis</author>
+
   <multiplay>
       <chat_display>1</chat_display>
       <generic>
-        
+    <!--    <bool n="0" type="bool" alias="sim/model/lights/sbc1/state">  0 </bool>  
+        <bool n="1" type="bool" alias="controls/lighting/nav-lights"> 0 </bool>  -->       
         <int n="6" alias="/controls/switches/smoke">0</int> <!-- 6 smoke -->
-        <float n="7" alias="/engines/engine/rpm">0</float> <!-- RPM -->
+        <float n="7" alias="/engines/engine/rpm">0</float> <!-- #7 RPM -->
         
       </generic>
     </multiplay>

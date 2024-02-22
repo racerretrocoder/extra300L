@@ -47,7 +47,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>HDGpointer</object-name>
+    <object-name>Face</object-name>
     <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
     <axis>
       <x> 1 </x>
