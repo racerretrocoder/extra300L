@@ -23,7 +23,7 @@ Other things from the Operaters hand book
   <compression-ratio> 8.7 </compression-ratio>
   <cylinders> 6 </cylinders>
   <sparkfaildrop> 0.1 </sparkfaildrop> 
-  <man-press-lag> 0.001 </man-press-lag> 
+  <man-press-lag> 0.2 </man-press-lag> 
   <volumetric-efficiency> 0.95 </volumetric-efficiency>
   <bsfc>  0.4 </bsfc>
   
