@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<PropertyList>
+
+  <path>asi.ac</path>
+
+
+  <animation>
+    <object-name>contour</object-name>
+    <object-name>Fond</object-name>
+    <object-name>ASINeedle</object-name>
+
+    <object-name>ASIvitre</object-name>
+  </animation>
+  
+  <animation>
+    <type>noshadow</type>
+    <object-name>ASIvitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>ASIvitre</object-name>
+  </animation>
+ 
+<!-- eclairage de l'instru
+  <animation>
+    <type>material</type>
+    <object-name>Fond</object-name>
+    <object-name>ASINeedle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation> -->
+  
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>ASINeedle</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+   <entry><ind>  10</ind><dep>    3</dep></entry>
+   <entry><ind>  80</ind><dep>  102</dep></entry>
+   <entry><ind> 120</ind><dep>  175</dep></entry>
+   <entry><ind> 160</ind><dep>  236</dep></entry>
+   <entry><ind> 200</ind><dep>  292</dep></entry>
+   <entry><ind> 240</ind><dep>  328</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+<animation>
+    <type>material</type>
+    <object-name>contour</object-name>
+    <object-name>Fond</object-name>
+    <object-name>ASINeedle</object-name>
+
+    <object-name>ASIvitre</object-name>
+    <emission>
+      <factor-prop>systems/electrical/suppliers/alternator</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation> 
+
+
+</PropertyList>

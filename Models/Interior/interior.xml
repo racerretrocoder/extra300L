@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+  
+     <!-- Tableau de bord du pilote (à l'arrière)-->
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/panel2.xml</path>
+    <offsets>
+      <x-m> -0.345 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.206 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+  
+       <!-- Tableau de bord du copilote (à l'avant)-->
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel1/panel1.xml</path>
+    <offsets>
+      <x-m> -1.297 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.275 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+</PropertyList>

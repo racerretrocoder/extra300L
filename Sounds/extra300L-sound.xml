@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ 
+<PropertyList>
+
+  <fx>
+
+    <!-- AMBIANCE -->
+
+          <ambiance>
+    		  <name>ambiance</name>
+    	        <path>Aircraft/extra300L/Sounds/extra300L_fly-by.wav</path>
+      				<mode>once</mode>
+        				<property>sim/signals/fdm-initialized</property>
+            	    <volume>
+                		<property>sim/signals/fdm-initialized</property>
+         			     <factor>1</factor>
+            	   </volume>
+            <position>
+                <x> 0.00 </x>
+                <y> 0.00 </y>
+                <z> 0.00 </z>
+            </position>
+    	</ambiance>
+
+    <crank>
+      <name>engstart</name>
+      <path>Aircraft/extra300L/Sounds/extra300L_starter_1.wav</path>
+      <property>engines/engine/cranking</property>
+      <volume>
+        <offset>-0.6</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>    
+
+    <crank>
+      <name>crank</name>
+      <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/extra300L_starter_1.wav</path>
+      <condition>
+        <property>/engines/engine/cranking</property>
+        <not>
+          <property>/engines/engine/running</property>
+        </not>
+      </condition>
+      <volume>
+        <offset>0.5</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>cough</name>
+      <path>Aircraft/extra300L/Sounds/extra300L_lancement.wav</path>
+      <property>engines/engine/running</property>
+	 <volume>
+        <offset>0.2</offset>
+      </volume>
+    </crank>
+<!--
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/extra300L-engine-out.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>60</value>
+          </greater-than>
+          <or>
+            <greater-than>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <not>
+              <property>sim/current-view/internal</property>
+            </not>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine/mp-osi</property>
+        <factor>0.00375</factor>
+        <min>0.2</min>
+        <max>2.0</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/rpm</property>
+        <factor>0.0005</factor>
+      </pitch>
+		<position>
+			<x> -2.10 </x>
+			<y>  0.02 </y>
+			<z> -0.60 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+    </engine>
+-->
+    <engine-external>
+      <name>engine-external</name>
+      <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/extra300L-engine-out.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>60</value>
+          </greater-than>
+          <not>
+            <greater-than>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </not>
+            <not>
+              <property>sim/current-view/internal</property>
+            </not>
+        </and>
+      </condition>
+      <pitch>
+        <property>engines/engine/rpm</property>
+        <factor>0.0005</factor>
+        <min>0.2</min>
+        <max>2.0</max>
+        <offset>0.15</offset>
+      </pitch>
+		<position>
+			<x> -2.10 </x>
+			<y>  0.02 </y>
+			<z> -0.60 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+      <reference-dist>100.0</reference-dist>
+      <max-dist>1000.0</max-dist>
+    </engine-external>
+
+    <engine-internal>
+      <name>engine-internal</name>
+      <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/extra300L-engine-in.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>60</value>
+          </greater-than>
+          <not>
+            <greater-than>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </not>
+        </and>
+      </condition>
+      <pitch>
+        <property>engines/engine/rpm</property>
+        <factor>0.0005</factor>
+        <min>0.2</min>
+        <max>2.0</max>
+        <offset>0.15</offset>
+      </pitch>
+		<position>
+			<x> -2.10 </x>
+			<y>  0.02 </y>
+			<z> -0.60 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+      <reference-dist>4.0</reference-dist>
+      <max-dist>10.0</max-dist>
+    </engine-internal>
+
+    <propeller>
+      <name>propeller</name>
+      <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/extra300L-prop1.wav</path>
+      <condition>
+        <greater-than>
+          <property>engines/engine/rpm</property>
+          <value>60</value>
+        </greater-than>
+        <not>
+          <and>
+            <equals>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </equals>
+            <property>sim/current-view/internal</property>
+          </and>
+        </not>
+      </condition>
+      <pitch>
+        <property>/engines/engine/mp-osi</property>
+        <factor>0.0036</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+        <offset>0.9</offset>
+      </pitch>
+		<position>
+			<x> -3.20 </x>
+			<y>  0.00 </y>
+			<z>  0.10 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+    </propeller>
+
+    <stop>
+       <name>stop</name>
+        <path>Aircraft/extra300L/Sounds/extra300L-shutdown.wav</path>
+    <condition>
+      <not>
+            <property>/engines/engine/running</property>
+      </not>
+    </condition>
+       <volume>
+            <property>/sim/current-view/internal</property>
+               <factor>2.0</factor>
+      <offset>1.0</offset>
+       </volume>
+    <reference-dist>100</reference-dist>
+    <max-dist>1000</max-dist>
+		<position>
+			<x> -2.10 </x>
+			<y>  0.02 </y>
+			<z> -0.60 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+   </stop>  
+
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.25</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+		<position>
+			<x> -1.65 </x>
+			<y> -0.01 </y>
+			<z> -1.04 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+    </rumble>
+
+    <squeal>
+      <name>squeal</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.2</offset>
+      </pitch>
+      <reference-dist>900</reference-dist>
+      <max-dist>2500</max-dist>
+		<position>
+			<x> -1.65 </x>
+			<y> -0.01 </y>
+			<z> -1.04 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+    </squeal>
+ 
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>/position/altitude-ft</property>
+        <factor>-0.000015</factor>
+        <offset>1.0</offset>
+        <min>0.1</min>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0015</factor>
+        <min>0.03</min>
+        <max>0.25</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0035</factor>
+        <offset>1.25</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </wind>
+ 
+    <stall>
+      <name>stall</name>
+      <mode>looped</mode>
+      <path>Sounds/stall.wav</path>
+      <condition>
+        <and>
+          <property>/sim/alarms/stall-warning</property>
+          <greater-than>
+            <property>/velocities/airspeed-kt</property>
+            <value>10</value>
+          </greater-than>
+          <not>
+            <property>/gear/gear[0]/wow</property>
+            <property>/gear/gear[1]/wow</property>
+            <property>/gear/gear[2]/wow</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>/sim/alarms/stall-warning</property>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>20.0</max-dist>
+    </stall>
+
+    <!--                  Toggle Switches                  -->
+    <click>
+      <name>Clickon</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <property>sim/model/click</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Clickoff</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <not><property>sim/model/click</property></not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Magnetos-off</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+       <not>
+        <property>controls/engines/engine/magnetos</property>
+       </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+	 
+    <click> 
+      <name>Magnetos-R</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+  
+    <click> 
+      <name>Magnetos-L</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>2</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+  
+    <click> 
+      <name>Magnetos-B</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Strobe Lights On</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition> 
+        <property>controls/switches/strobe-lights</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Strobe Lights Off</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <not> 
+          <property>controls/switches/strobe-lights</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Avionics Master On</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/master-avionics</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+     </volume>
+    </click>
+ 
+    <click> 
+      <name>Avionics Master Off</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/master-avionics</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Nav Light On</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/nav-lights</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Nav Light Off</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/nav-lights</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+ 
+    <click>
+      <name>Landing Light On</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/landing-light</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+      
+    <click>
+      <name>Landing Light Off</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/landing-light</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Smoke On</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <property>controls/smoke</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Smoke Off</name>
+      <path>Aircraft/extra300L/Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/smoke</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <rain>
+      <name>rain</name>
+      <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/rain_canopy.wav</path>
+      <condition>
+        <greater-than>
+          <property>/environment/metar/rain-norm</property>
+          <value>0.2</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>/environment/metar/rain-norm</property>
+        <factor>1.00</factor>
+        <offset>0.00</offset>
+        <min>0.4</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.001</factor>
+        <offset>1.0</offset>
+      </pitch>
+    </rain>
+
+    <vent>
+      <name>vent</name>
+      <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/extra300L_vent.wav</path>
+      <property>velocities/airspeed-kt</property>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.005</factor>
+        <max>1.5</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.005</factor>
+      </pitch>
+    </vent>
+
+  </fx>
+ 
+</PropertyList>

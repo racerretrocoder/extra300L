@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Le -set inclu le fichier extra300L-yasim-cnf.xml et extra300L-base.xml -->
+<PropertyList include="extra300L-yasim-cnf.xml">
+
+  <sim>
+
+    <description>Extra 300L</description>
+    <author>Laille Alexis</author>
+  <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        
+        <int n="6" alias="/controls/switches/smoke">0</int> <!-- 6 smoke -->
+        
+      </generic>
+    </multiplay>
+
+	
+  </sim>
+</PropertyList>
+

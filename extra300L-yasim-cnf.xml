@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Le -set inclu ce fichier et extra300L-base.xml -->
+<PropertyList include="extra300L-base.xml">
+
+  <sim>
+
+    <description>Extra 300 L (YASim)</description>
+    <author>Laille Alexis</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">extra300L-yasim</aero>
+
+  </sim>
+
+</PropertyList>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- ########################################
+
+ # EXTRA300L by PAF team
+ # April 2016 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+
+
+<PropertyList>
+
+  <sim include="views.xml">
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+    <fuel-fraction>1.0</fuel-fraction>
+	
+    <startup>
+         <splash-texture>Splash.png</splash-texture>
+    </startup>
+
+    <sound>
+         <path archive="y">Aircraft/extra300L/Sounds/extra300L-sound.xml</path>
+    </sound>
+
+    <model>
+         <path archive="y">Aircraft/extra300L/Models/extra300L-model.xml</path>
+   <livery>
+      <name type="string">Default</name>
+<file type="string">Default</file>
+      <texture>Liveries/Default.png</texture>
+    </livery>
+    </model>
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="bool" n="6"> 0 </int>                                             <!-- 6 smoke -->
+        <int type="int" n="7">  0 </int>                                             <!-- 7 color -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>                       <!-- altitude for Smoke/Trail -->
+      </generic>
+    </multiplay>
+
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>175</weight-lb>
+      <max-lb>200</max-lb>
+    </weight>
+   <controls>
+      <smoke type="bool">0</smoke>
+      <switches>
+      <smoke type="bool">0</smoke>
+    </switches>
+  </controls>
+  <input>
+    <keyboard>
+      <key n="115">
+        <name>s</name>
+        <desc>Starter</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/engines/engine/starter_cmd</property>
+          <value>1</value>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-assign</command>
+            <property>controls/engines/engine/starter_cmd</property>
+            <value>0</value>
+          </binding>
+        </mod-up>
+      </key>
+
+      <key n="83">
+        <name>S</name>
+        <desc>Start/stop smoke</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/switches/smoke</property>
+        </binding>
+      </key>
+    </keyboard>
+  </input>
+
+  <nasal>
+    <extra300LCommon>      
+    <file>Aircraft/extra300L/Nasal/interpolate.nas</file>
+    </extra300LCommon>
+<ar6201>
+			<file>Aircraft/Instruments-3d/ar-6201/ar6201emod.nas</file>
+		</ar6201>
+  </nasal>
+
+  <help>
+      <title>EXTRA300 L-Model</title>
+      <key>
+        <name>S</name>
+        <desc>Start/stop smoke</desc>
+      </key>
+      <!--line/>
+      <line>_________Reports_________</line>
+      <line>Rotate    = 100km/h (54kt) </line>
+      <line>Downwind  = 1800 RPM, 10 flaps</line>
+      <line>Final     = 1500 RPM, descent at 500ft/min</line>
+      <line/>
+      <line>_______Stall speeds______</line>
+      <line>           (Cat. U, idle)        </line>
+      <line>Vs flaps  0 = 99km/h (53kt)</line>
+      <line>Vs flaps 10 = 91km/h (49kt)</line>
+      <line>Vs flaps 40 = 86km/h (46kt)</line>
+      <line/>
+      <line>_________Fuel_________</line>
+      <line>For aerobatics, use front tank only and rear tank must be empty</line>
+      <line/>
+      <line>Rear tank is empty at startup</line>
+      <line>feel you free to fill it with the menu "Equipement > Fuel and Payload"</line-->
+    </help>
+
+  <menubar>
+    <default>
+      <menu n="100">
+        <label>Extra300L</label>
+        <enabled type="bool">true</enabled>
+        <item>
+          <label>Select Livery</label>
+          <binding>
+            <command>nasal</command>
+            <script>aircraft.livery.dialog.open();</script>
+          </binding>
+        </item>
+      </menu>
+    </default>
+  </menubar>
+		<instrumentation>
+				<path>Aircraft/extra300L/systems/Instrumentation.xml</path>
+</instrumentation>
+
+</sim>
+
+<instrumentation>
+		<altimeter n="1">
+			<serviceable type="bool">1</serviceable>
+		</altimeter>
+		<comm>
+			<serviceable-int type="int">0</serviceable-int>
+			<current-change type="int">0</current-change>
+			<sql-ic-pressed type="bool">0</sql-ic-pressed>
+			<intercom type="bool">0</intercom>
+			<sq type="bool">1</sq>
+			<start type="double">0</start>
+			<pilot-menu type="int">0</pilot-menu>
+			<channel-menu type="int">0</channel-menu>
+			<brightness type="double">0.7</brightness>
+			<squelch-lim type="double">8</squelch-lim>
+			<selected-channel type="int">0</selected-channel>
+		</comm>
+		<transponder>
+			<knob-mode type="int">0</knob-mode>	<!--	TODO will be set accordingly if transponder is installed	-->
+		</transponder>
+	</instrumentation>
+<systems>
+			<electrical>
+				<path>Aircraft/extra300L/systems/Electrical.xml</path>
+
+			</electrical>
+		</systems>
+<nasal>
+<ar6201>
+			<file>Aircraft/Instruments-3d/ar-6201/ar6201emod.nas</file>
+		</ar6201>
+</nasal>
+   
+</PropertyList>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel2.ac</path>
+  <model>
+		
+		<name>comm</name>
+		<path>Aircraft/Instruments-3d/ar-6201/ar-6201.xml</path>
+		<offsets>
+			<x-m>0.029</x-m>
+			<y-m> 0.169</y-m>
+			<z-m>0.130</z-m>
+		</offsets>
+	</model>
+
+   <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Altimetre/altimetre.xml</path>
+    <offsets>
+      <x-m> 0.007 </x-m>
+      <y-m> 0.091 </y-m>
+      <z-m> 0.150 </z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Hdg/hdg.xml</path>
+    <offsets>
+      <x-m>  0.017 </x-m>
+      <y-m> -0.004 </y-m>
+      <z-m>  0.070 </z-m>
+    </offsets>
+  </model>
+  
+   <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Man/man.xml</path>
+    <offsets>
+      <x-m>  0.022 </x-m>
+      <y-m>  0.096 </y-m>
+      <z-m>  0.070 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.017 </x-m>
+      <y-m>  -0.099 </y-m>
+      <z-m>  0.150 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- magnetos -->
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Magnetos/magnetos.xml</path>
+    <offsets>
+      <x-m>   0.02 </x-m>
+      <y-m>  -0.242   </y-m>
+      <z-m>   0.089   </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.017 </x-m>
+      <y-m> -0.099 </y-m>
+      <z-m>  0.069 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.022 </x-m>
+      <y-m> -0.198 </y-m>
+      <z-m>  0.055 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/Oil/oil.xml</path>
+    <offsets>
+      <x-m>  0.017 </x-m>
+      <y-m> 0.189 </y-m>
+      <z-m>  0.055 </z-m>
+    </offsets>
+  </model>
+
+<model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m>  0.027 </x-m>
+      <y-m> 0.269 </y-m>
+      <z-m>  0.055 </z-m>
+    </offsets>
+  </model>
+  
+   <!-- fumée --> 
+  <model>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/switchs/smoke-switch.xml</path>
+    <offsets>
+      <x-m>   0.0242 </x-m>
+      <y-m>   0.1215   </y-m>
+      <z-m>   0.0133   </z-m>
+    </offsets>
+  </model>
+  
+   <!-- position des instruments
+  badin : 0.025 -0.099 0.150
+  alti  : 0.017  0.091 0.150
+  vario : 0.025 -0.099 0.069
+  cap   : 0.025 -0.004 0.070
+  mp/fuel:0.025  0.096 0.070
+  turn  : 0.025 -0.198 0.053
+  oil   : 0.023  0.189 0.055
+  fuel  : 0.025 -0.115 -0.128
+  
+  
+  -->
+</PropertyList>
