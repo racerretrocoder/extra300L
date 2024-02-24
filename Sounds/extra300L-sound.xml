@@ -153,6 +153,52 @@
     <engine-internal>
       <name>engine-internal</name>
       <mode>looped</mode>
+      <path>Aircraft/extra300L/Sounds/extra300L-engine-in-low.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>60</value>
+          </greater-than>
+          <less-than>
+            <property>engines/engine/rpm</property>
+            <value>1500</value>
+          </less-than>
+          <not>
+            <greater-than>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </not>
+        </and>
+      </condition>
+      <pitch>
+        <property>engines/engine/rpm</property>
+        <factor>0.0005</factor>
+        <min>0.2</min>
+        <max>2.0</max>
+        <offset>0.15</offset>
+      </pitch>
+		<position>
+			<x> -2.10 </x>
+			<y>  0.02 </y>
+			<z> -0.60 </z>
+		</position>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>45</inner-angle>
+				<outer-angle>120</outer-angle>
+				<outer-gain>0.5</outer-gain>
+			</orientation>
+      <reference-dist>4.0</reference-dist>
+      <max-dist>10.0</max-dist>
+    </engine-internal>
+ 
+<engine-internal1>
+      <name>engine-internal1</name>
+      <mode>looped</mode>
       <path>Aircraft/extra300L/Sounds/extra300L-engine-in.wav</path>
       <condition>
         <and>
@@ -190,7 +236,9 @@
 			</orientation>
       <reference-dist>4.0</reference-dist>
       <max-dist>10.0</max-dist>
-    </engine-internal>
+    </engine-internal1>
+
+
 
     <propeller>
       <name>propeller</name>

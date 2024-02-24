@@ -177,6 +177,15 @@
 				<path>Aircraft/extra300L/systems/Electrical.xml</path>
 
 			</electrical>
+		<FES>
+			<amps type="double">28</amps>
+			<volts type="double">28</volts>
+			<master-switch type="bool">1</master-switch>
+			<power-switch type="bool">1</power-switch>
+			<throttle type="float">0.0</throttle>
+			<throttle-int type="double">0.0</throttle-int>
+		</FES>
+
 		</systems>
 <nasal>
 <ar6201>
@@ -192,6 +201,13 @@
         <dual_control_tools>
             <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
         </dual_control_tools>
+
+        <pilot_dual_control>
+            <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
+        </pilot_dual_control>
+		<fes>
+			<file>Models/Interior/Panel2/Instruments/FCU/FCU_display.nas</file>
+		</fes>
 </nasal>
    
 </PropertyList>

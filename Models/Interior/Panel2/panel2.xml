@@ -9,8 +9,8 @@
 		<path>Aircraft/Instruments-3d/ar-6201/ar-6201.xml</path>
 		<offsets>
 			<x-m>0.029</x-m>
-			<y-m> 0.169</y-m>
-			<z-m>0.130</z-m>
+			<y-m> 0.279</y-m>
+			<z-m>0.053</z-m>
 		</offsets>
 	</model>
 
@@ -94,15 +94,15 @@
     <offsets>
       <x-m>  0.017 </x-m>
       <y-m> 0.189 </y-m>
-      <z-m>  0.055 </z-m>
+      <z-m>  0.145 </z-m>
     </offsets>
   </model>
-
+<!-- tach 0extra300L/Models/Interior/Panel2/Instruments -->
 <model>
-    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/tach/tach.xml</path>
+    <path>Aircraft/Instruments-3d/tach/tach.xml</path>
     <offsets>
       <x-m>  0.027 </x-m>
-      <y-m> 0.269 </y-m>
+      <y-m> 0.189 </y-m>
       <z-m>  0.055 </z-m>
     </offsets>
   </model>
