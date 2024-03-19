@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+This is an aeio-540 300 hp
+6-cylinder Fuel injected horizontally-opposed air-cooled piston engine, Lubricated for Aerobatic performance used by Extra300L
+
+According to my Extra, its idle range is around below 1000rpm-650rpm. 650-800 Depends on the temputure when we fly it
+The rpms very slightly jump up and down at the rev lim. for a second and then its smooth, This dose not happen while airborn
+Max RPM to 2700 as allways
+Other things from the Operaters hand book
+-->
+
+<piston_engine name="AEIO_540">
+  <minmp unit="INHG">10.0</minmp>
+  <maxmp unit="INHG">50.0</maxmp>
+  <displacement unit="IN3">540</displacement>
+  <maxhp>300.00</maxhp>
+  <cycles>4.0</cycles>
+  <idlerpm>400.0</idlerpm>
+  <maxrpm>2700.0</maxrpm>
+  
+  <bore unit="IN"> 5.125 </bore>
+  <stroke unit="IN">4.375 </stroke>
+  <compression-ratio> 8.7 </compression-ratio>
+  <cylinders> 6 </cylinders>
+  <sparkfaildrop> 0.1 </sparkfaildrop> 
+  <man-press-lag> 0.13 </man-press-lag> 
+  <volumetric-efficiency> 0.95 </volumetric-efficiency>
+  <bsfc>  0.4 </bsfc>
+  
+</piston_engine>
+
