@@ -16,7 +16,7 @@ Other things from the Operaters hand book
   <maxhp>300.00</maxhp>
   <cycles>4.0</cycles>
   <idlerpm>400.0</idlerpm>
-  <maxrpm>2900.0</maxrpm>
+  <maxrpm>2700.0</maxrpm>
   
   <bore unit="IN"> 5.125 </bore>
   <stroke unit="IN">4.375 </stroke>
