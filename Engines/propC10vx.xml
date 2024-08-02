@@ -20,7 +20,7 @@
   <ct_factor> 1.5 </ct_factor>
   <cp_factor> 1.5 </cp_factor>
   <minrpm>   2100 </minrpm>
-  <maxrpm>   2700 </maxrpm> 
+  <maxrpm>   3000 </maxrpm> 
 
   <table name="C_THRUST" type="internal">
     <tableData>

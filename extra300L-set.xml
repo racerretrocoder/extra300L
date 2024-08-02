@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Le -set inclu le fichier extra300L-yasim-cnf.xml et extra300L-base.xml -->
-<PropertyList include="extra300L-yasim-cnf.xml">
+<!-- Le -set inclu ce fichier et extra300L-base.xml -->
+<PropertyList include="extra300L-base.xml">
 
   <sim>
 
-    <description>Extra 300L</description>
+    <description>Extra300L jsbsim</description>
     <author>Laille Alexis</author>
+    <flight-model archive="y">jsb</flight-model>
+    <aero archive="y">extra300L-jsb</aero>
 
-  <multiplay>
-      <chat_display>1</chat_display>
-      <generic>
-    <!--    <bool n="0" type="bool" alias="sim/model/lights/sbc1/state">  0 </bool>  
-        <bool n="1" type="bool" alias="controls/lighting/nav-lights"> 0 </bool>  -->       
-        <int n="6" alias="/controls/switches/smoke">0</int> <!-- 6 smoke -->
-        <float n="7" alias="/engines/engine/rpm">0</float> <!-- #7 RPM -->
-        
-      </generic>
-    </multiplay>
-
-	
   </sim>
-</PropertyList>
 
+</PropertyList>

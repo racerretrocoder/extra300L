@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="views.xml">
+
+    <description>Extra 300L Copilot With Control</description>
+    <author>Phoenix</author>
+    <aircraft-version>0.3.0</aircraft-version>
+    <status>Alpha</status>
+
+    
+    <flight-model>null</flight-model>
+    <aero>extra300L-jsb</aero>
+
+    <startup>
+
+    </startup>
+
+
+    <model>
+      <path>Aircraft/extra300L/Models/extra300L-copilot.xml</path>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+
+                <float n="3" type="float" alias="/controls/flight/elevator"/>
+                <float n="4" type="float" alias="/controls/flight/aileron"/> 
+                <float n="6" type="float" alias="/controls/engines/throttle-all"/> 
+                <float n="5" type="float" alias="/controls/flight/rudder"/> 
+      </generic>
+    </multiplay>
+
+
+
+
+  <menubar>
+      <default>
+    <menu n="100">
+      <label>Extra300L Copilot</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select MP-pilot</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            dual_control_tools.
+            copilot_dialog.show(aircraft_dual_control.pilot_type);
+          </script>
+        </binding>
+      </item>
+    </menu>
+    </default>
+  </menubar>
+  </sim>
+
+  <!-- never set the magnetos here to 0, cause the sound for the cutoff is controlled by magnetos 0 in dox-sound.xml -->
+  <controls>
+    <engines>
+      <throttle-pilot-left type="double">0.0</throttle-pilot-left>
+      <throttle-pilot-right type="double">0.0</throttle-pilot-right>
+      <helpengine-lever type="double">0.5</helpengine-lever>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="2">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="3">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="4">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="5">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="6">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="7">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="8">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="9">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="10">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="11">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+
+    <lighting>
+      <panel type="bool">1</panel>
+      <navigationcabin type="bool">1</navigationcabin>
+      <engineerpanel type="bool">1</engineerpanel>
+      <radiocabin type="bool">1</radiocabin>
+      <helpenginecabin type="bool">1</helpenginecabin>
+      <brightness type="double">1.0</brightness>
+    </lighting>
+
+    <glass-effect type="bool">1</glass-effect>
+
+  </controls>
+
+
+
+  <instrumentation>
+    <rdf>
+      <power-on>0</power-on>
+      <frequency-select-knob>0</frequency-select-knob>
+      <headset>
+        <enabled type="bool">0</enabled>
+        <!-- properties swap if pilot fit headset -->
+        <atc-enabled type="bool">1</atc-enabled>
+        <atc-volume type="double">0.7</atc-volume>
+        <avionics-enabled type="bool">1</avionics-enabled>
+        <avionics-volume type="double">1.0</avionics-volume>
+        <chatter-enabled type="bool">0</chatter-enabled>
+        <chatter-volume type="double">0.0</chatter-volume>
+        <effects-enabled type="bool">1</effects-enabled>
+        <effects-volume type="double">0.08</effects-volume>
+        <master-enabled type="bool">1</master-enabled>
+        <master-volume type="double">0.7</master-volume>
+        <adf-ident-audible type="bool">1</adf-ident-audible>
+        <adf-volume-norm type="double">0.7</adf-volume-norm>
+        <nav-audio-btn type="bool">1</nav-audio-btn>
+        <nav-volume type="double">0.7</nav-volume>
+      </headset>
+    </rdf>
+    <adf>
+      <power-btn type="bool">0</power-btn>
+    </adf>
+  </instrumentation>
+
+  <nasal>
+
+    <dual_control_tools>
+      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+      <file>Aircraft/extra300L/Nasal/varsdual.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+      <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+    </dual_control>
+  </nasal>
+
+</PropertyList>

@@ -6,7 +6,7 @@
  # April 2016 : Modified by PAF team
  # http://equipe-flightgear.forumactif.com
  #
- # Febuary 2024: Modd's by Phoenix
+
 
 ##########################################-->
 
@@ -29,21 +29,29 @@
 
     <model>
          <path archive="y">Aircraft/extra300L/Models/extra300L-model.xml</path>
-   <livery>
-      <name type="string">Default</name>
-<file type="string">Default</file>
-      <texture>Liveries/Default.png</texture>
+ <livery>
+      <file type="string"/>
     </livery>
     </model>
     <multiplay>
       <chat_display>1</chat_display>
       <generic> 
-        <int type="bool" n="6"> 0 </int>                                             <!-- 6 smoke -->
+
+
+        <int type="bool" n="6"> false </int>                                             <!-- 6 smoke -->
         <int type="int" n="7">  0 </int>                                             <!-- 7 color -->
     
         <float n="3" alias="/position/altitude-ft"> 0 </float>
                <float n="0" alias="/sim/model/door-positions/crew/position-norm">1</float>
         <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>                      <!-- altitude for Smoke/Trail -->
+                <float n="7" type="float" alias="/engines/engine/rpm"/>
+                <float n="6" type="float" alias="/controls/DC/Elevator"/>
+                <float n="5" type="float" alias="/controls/DC/Aileron"/> 
+                <float n="8" type="float" alias="/controls/DC/throt"/> 
+                                <float n="9" type="float" alias="/controls/DC/Rudder"/> 
+      
+      
+      
       </generic>
     </multiplay>
 
@@ -59,7 +67,24 @@
       <switches>
       <smoke type="bool">0</smoke>
     </switches>
+    <DC>
+<pilot type="string">none</pilot>
+<Enable type="int">0</Enable> 
+<mp1 type="string">none</mp1>
+<mp2 type="string">none</mp2>
+<mp3 type="string">none</mp3>
+<mp4 type="string">none</mp4>
+<mp5 type="string">none</mp5>
+<mp6 type="string">none</mp6>
+<mp7 type="string">none</mp7>
+<mp8 type="string">none</mp8>
+<mp9 type="string">none</mp9>
+<mp10 type="string">none</mp10>
+
+    </DC>
   </controls>
+
+
   <input>
     <keyboard>
       <key n="115">
@@ -98,7 +123,7 @@
         <name>S</name>
         <desc>Start/stop smoke</desc>
       </key>
-      <!--line/>
+      <line/>
       <line>_________Reports_________</line>
       <line>Rotate    = 100km/h (54kt) </line>
       <line>Downwind  = 1800 RPM, 10 flaps</line>
@@ -114,7 +139,7 @@
       <line>For aerobatics, use front tank only and rear tank must be empty</line>
       <line/>
       <line>Rear tank is empty at startup</line>
-      <line>feel you free to fill it with the menu "Equipement > Fuel and Payload"</line-->
+      <line>feel you free to fill it with the menu "Equipement > Fuel and Payload"</line>
     </help>
 
   <menubar>
@@ -129,6 +154,16 @@
             <script>aircraft.livery.dialog.open();</script>
           </binding>
         </item>
+      <item>
+        <label>Select MP-Copilot</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            dual_control_tools.
+            copilot_dialog.show(aircraft_dual_control.copilot_type);
+          </script>
+        </binding>
+      </item>
       </menu>
     </default>
   </menubar>
@@ -150,7 +185,9 @@
     <panel-norm>1</panel-norm>
   </lighting>
 </controls>
-
+<copilot>
+			<enable type="int">0</enable>
+</copilot>
 <instrumentation>
 		<altimeter n="1">
 			<serviceable type="bool">1</serviceable>
@@ -188,8 +225,12 @@
 
 		</systems>
 <nasal>
+
+<livery>
+      <file>Aircraft/extra300L/Nasal/liveries.nas</file>
+</livery>
 <ar6201>
-			<file>Aircraft/Instruments-3d/ar-6201/ar6201emod.nas</file>
+			<file>Aircraft/extra300L/Nasal/ar6201.nas</file>
 		</ar6201>
     <doors>
       <file>Aircraft/extra300L/Nasal/doors.nas</file>
@@ -198,13 +239,24 @@
       <file>Aircraft/extra300L/Nasal/light.nas</file>
 </lights>
 
-        <dual_control_tools>
+
+ <dual_control_tools>
             <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
         </dual_control_tools>
 
-        <pilot_dual_control>
+  <aircraft_dual_control>
+   <file>Aircraft/extra300L/nasal/varsdual.nas</file>
+  </aircraft_dual_control>
+
+
+        <dual_control>
             <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
-        </pilot_dual_control>
+        </dual_control>
+
+       		<rec>
+			<file>Aircraft/extra300L/nasal/pilotrec.nas</file>
+		</rec>
+
 		<fes>
 			<file>Models/Interior/Panel2/Instruments/FCU/FCU_display.nas</file>
 		</fes>

@@ -359,7 +359,7 @@
     </offsets>
   </model>
   <model>
-    <path>Aircraft/Zlin-50lx/Models/Lights/StrobeLight.xml</path>
+    <path>Aircraft/extra300L/Models/Lights/StrobeLight.xml</path>
     <offsets>
       <x-m> -1.329 </x-m>
       <y-m>  4.003 </y-m>
@@ -367,7 +367,7 @@
     </offsets>
   </model>
  <model>
-    <path>Aircraft/Zlin-50lx/Models/Lights/GreenLight.xml</path>
+    <path>Aircraft/extra300L/Models/Lights/GreenLight.xml</path>
     <offsets>
       <x-m> -1.429 </x-m>
       <y-m> -4.003 </y-m>
@@ -378,7 +378,7 @@
 
 
   <model>
-    <path>Aircraft/Zlin-50lx/Models/Lights/RedLight.xml</path>
+    <path>Aircraft/extra300L/Models/Lights/RedLight.xml</path>
     <offsets>
       <x-m> -1.429 </x-m>
       <y-m>  4.003 </y-m>
