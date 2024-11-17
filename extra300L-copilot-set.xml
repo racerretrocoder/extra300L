@@ -28,7 +28,7 @@
 
                 <float n="3" type="float" alias="/controls/flight/elevator"/>
                 <float n="4" type="float" alias="/controls/flight/aileron"/> 
-                <float n="6" type="float" alias="/controls/engines/throttle-all"/> 
+                <float n="6" type="float" alias="/controls/engines/engine/throttle-all"/> 
                 <float n="5" type="float" alias="/controls/flight/rudder"/> 
       </generic>
     </multiplay>
@@ -144,7 +144,9 @@
   </instrumentation>
 
   <nasal>
-
+  <!--   <copilot>
+      <file>Aircraft/extra300L/Nasal/copilot.nas</file>
+    </copilot>-->
     <dual_control_tools>
       <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
     </dual_control_tools>

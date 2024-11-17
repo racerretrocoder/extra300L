@@ -8,6 +8,10 @@
 ##
 ###############################################################################
 
+# This file is only used to connect to them
+
+
+
 # Renaming (almost :)
 var DCT = dual_control_tools;
 ######################################################################
@@ -90,24 +94,7 @@ var pilot_connect_copilot = func (copilot) {
          # Process local properties for MP.
          ######################################################################
          # push local parameter in the float[]/int[] or whatever for MP
-         DCT.Translator.new
-         (props.globals.getNode("/instrumentation/vertical-speed-indicator/indicated-speed-fpm"),
-          props.globals.getNode("/sim/multiplay/generic/float[6]", 1)),
-         DCT.Translator.new
-         (props.globals.getNode("/instrumentation/slip-skid-ball/indicated-slip-skid"),
-          props.globals.getNode("/sim/multiplay/generic/float[7]", 1)),
-         DCT.Translator.new
-         (props.globals.getNode("/instrumentation/turn-indicator/indicated-turn-rate"),
-          props.globals.getNode("/sim/multiplay/generic/float[8]", 1)),
-         DCT.Translator.new
-         (props.globals.getNode("/instrumentation/magnetic-compass/indicated-heading-deg"),
-          props.globals.getNode("/sim/multiplay/generic/float[9]", 1)),
-         DCT.Translator.new
-         (props.globals.getNode("/controls/engines/throttle-pilot-right"),
-          props.globals.getNode("/sim/multiplay/generic/float[10]", 1)),
-         DCT.Translator.new
-         (props.globals.getNode("/controls/engines/throttle-pilot-left"),
-          props.globals.getNode("/sim/multiplay/generic/float[11]", 1)),
+
 
          ######################################################################
          # Process properties to send.
@@ -144,7 +131,7 @@ var copilot_connect_pilot = func (pilot) {
 
     # Map (some) properties needed to (e.g.) animate the MP/AI model.
     copilot_alias_aimodel(pilot);
-
+    print(pilot);
     print("Copilot on board!");
 
     return
@@ -166,73 +153,7 @@ var copilot_connect_pilot = func (pilot) {
          DCT.Translator.new
          (pilot.getNode("engines/engine[0]/rpm"),
           props.globals.getNode("engines/engine[0]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[1]/rpm"),
-          props.globals.getNode("engines/engine[1]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[2]/rpm"),
-          props.globals.getNode("engines/engine[2]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[3]/rpm"),
-          props.globals.getNode("engines/engine[3]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[4]/rpm"),
-          props.globals.getNode("engines/engine[4]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[5]/rpm"),
-          props.globals.getNode("engines/engine[5]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[6]/rpm"),
-          props.globals.getNode("engines/engine[6]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[7]/rpm"),
-          props.globals.getNode("engines/engine[7]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[8]/rpm"),
-          props.globals.getNode("engines/engine[8]/rpm", 1),1),
-         DCT.Translator.new
-         (pilot.getNode("engines/engine[9]/rpm"),
-          props.globals.getNode("engines/engine[9]/rpm", 1),1),
-
-         DCT.Translator.new
-         (pilot.getNode(pilot_average_rpm_left),
-          props.globals.getNode("controls/engines/average-rpm-left", 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_average_rpm_right),
-          props.globals.getNode("controls/engines/average-rpm-right", 1),1),
-
-         DCT.Translator.new
-         (pilot.getNode(pilot_set_anchor),
-          props.globals.getNode(copilot_see_anchor, 1),1),
-
-         DCT.Translator.new
-         (pilot.getNode(pilot_afn2_makeron),
-          props.globals.getNode(copilot_afn2_makeron, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_afn2_heading_corr),
-          props.globals.getNode(copilot_afn2_heading_corr, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_afn2_distance),
-          props.globals.getNode(copilot_afn2_distance, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_vertical_speed),
-          props.globals.getNode(copilot_vertical_speed, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_turn_slip_skid),
-          props.globals.getNode(copilot_turn_slip_skid, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_turn_rate),
-          props.globals.getNode(copilot_turn_rate, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_magnetic_compass),
-          props.globals.getNode(copilot_magnetic_compass, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_throttle_right),
-          props.globals.getNode(copilot_throttle_right, 1),1),
-         DCT.Translator.new
-         (pilot.getNode(pilot_throttle_left),
-          props.globals.getNode(copilot_throttle_left, 1),1)
-
+     
          ######################################################################
         ];
 }

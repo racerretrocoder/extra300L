@@ -38,6 +38,10 @@
       <generic> 
 
 
+
+
+<int n="3" type="int" alias="/controls/copilot-mode"/> 
+
         <int type="bool" n="6"> false </int>                                             <!-- 6 smoke -->
         <int type="int" n="7">  0 </int>                                             <!-- 7 color -->
     
@@ -63,6 +67,7 @@
     </weight>
    <controls>
 
+<copilot-mode type="int">0</copilot-mode> 
       <smoke type="bool">0</smoke>
       <switches>
       <smoke type="bool">0</smoke>
@@ -164,6 +169,26 @@
           </script>
         </binding>
       </item>
+     <item>
+        <label>Enable Copilot Flight Control</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            setprop("/sim/controls/copilot-mode", 1);
+            pilot.start();
+          </script>
+        </binding>
+      </item>
+         <item>
+        <label>Disable Copilot Flight Control</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            setprop("/sim/controls/copilot-mode", 0);
+            pilot.stop();
+          </script>
+        </binding>
+      </item>
       </menu>
     </default>
   </menubar>
@@ -253,9 +278,9 @@
             <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
         </dual_control>
 
-       		<rec>
-			<file>Aircraft/extra300L/nasal/pilotrec.nas</file>
-		</rec>
+  <pilot>
+      <file>Aircraft/extra300L/Nasal/pilot.nas</file>
+    </pilot>
 
 		<fes>
 			<file>Models/Interior/Panel2/Instruments/FCU/FCU_display.nas</file>
