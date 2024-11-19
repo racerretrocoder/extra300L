@@ -29,4 +29,38 @@
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
+
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>stick-rear</object-name>
+  <property>/controls/flight/aileron</property>
+  <factor>20</factor> <!-- The rotation in degrees... kinda -->
+
+  <axis>
+  <object-name>stickroll</object-name>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>stick-rear</object-name>
+  <property>/controls/flight/elevator</property>
+  <factor>14</factor> <!-- The rotation in degrees... kinda -->
+
+  <axis>
+  <object-name>stickpitch</object-name>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>throt</object-name>
+  <property>/controls/engines/engine/throttle</property>
+  <factor>50</factor> <!-- The rotation in degrees... kinda -->
+
+  <axis>
+  <object-name>throtaxis</object-name>
+  </axis>
+ </animation>
+
 </PropertyList>

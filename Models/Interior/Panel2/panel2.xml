@@ -99,7 +99,7 @@
   </model>
 <!-- tach 0extra300L/Models/Interior/Panel2/Instruments -->
 <model>
-    <path>Aircraft/Instruments-3d/tach/tach.xml</path>
+    <path>Aircraft/extra300L/Models/Interior/Panel2/Instruments/tach/tach.xml</path>
     <offsets>
       <x-m>  0.027 </x-m>
       <y-m> 0.189 </y-m>

@@ -5,8 +5,8 @@
 <sim>
   <model>
     <livery>
-      <name type="string">BFGoodrich Aerospace</name>
-      <texture>aero.png</texture>
+      <name type="string">BFGoodrich / Aerospace</name>
+      <texture-main>Liveries/aero.png</texture-main>
     </livery>
   </model>
 </sim>

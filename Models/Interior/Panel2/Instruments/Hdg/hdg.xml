@@ -5,6 +5,24 @@
 
   <path>hdg.ac</path>
 
+
+    <animation>
+    <type>material</type>
+    <object-name>contour</object-name>
+    <object-name>ALTbezel</object-name>
+    <object-name>Face</object-name>
+    <object-name>HDGpointer</object-name>
+    <object-name>HDG-Knob</object-name>
+    <object-name>HDGclick-offset-R</object-name>
+    <object-name>HDGclick-offset-L</object-name>
+    <emission>
+      <factor-prop>systems/electrical/suppliers/alternator</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation> 
+
   <animation>
     <object-name>contour</object-name>
     <object-name>ALTbezel</object-name>

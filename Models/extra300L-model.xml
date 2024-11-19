@@ -133,10 +133,9 @@
   <object-name>Cube</object-name>
   <object-name>Cylinder.002</object-name>
   <object-name>bol</object-name>
-
   <object-name>fuselage.003</object-name>
   <property-base>sim/model/livery</property-base>
-  <texture-prop>texture</texture-prop>
+  <texture-prop>texture-main</texture-prop>
   <texture>Liveries/Default.png</texture>
 </animation>
 

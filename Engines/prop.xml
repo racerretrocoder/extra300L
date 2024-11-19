@@ -22,13 +22,13 @@
   <ixx>   3.88 </ixx>
   <diameter unit="IN">  78.0 </diameter>
   <numblades> 3 </numblades>
-  <gearratio>  1.00 </gearratio>
+  <gearratio>  1.0 </gearratio>
   <cp_factor> 1.0 </cp_factor>
   <ct_factor> 1.0 </ct_factor>
   <minpitch> 8 </minpitch>
   <maxpitch> 45 </maxpitch>
-  <minrpm>   2100 </minrpm>
-  <maxrpm>   2900 </maxrpm>
+  <minrpm>   300 </minrpm>
+  <maxrpm>   2800 </maxrpm>
 
  <!-- thrust coefficient as a function of advance ratio and blade angle -->
   <table name="C_THRUST" type="internal">

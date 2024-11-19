@@ -6,7 +6,7 @@
   <model>
     <livery>
       <name type="string">Extra300L Default Livery</name>
-      <texture>Default.png</texture>
+      <texture-main>Liveries/Default.png</texture-main>
     </livery>
   </model>
 </sim>

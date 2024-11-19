@@ -3117,7 +3117,7 @@ refs 3
 kids 0
 OBJECT poly
 name "needleTF"
-loc 0.000446467 -0.00015187 1.82567e-005
+loc 0.000446467 0.000914306 0.000817332
 data 8
 needleTF
 texture "oil.png"

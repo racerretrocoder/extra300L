@@ -251,7 +251,7 @@
         <and>
           <greater-than>
             <property>engines/engine/rpm</property>
-            <value>1000</value>
+            <value>50</value>
           </greater-than>
           <not>
             <greater-than>

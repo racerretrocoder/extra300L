@@ -47,7 +47,7 @@ var tracked = 0;
     {
         print("I see someone! on mp0");
         var tracked = 0;
-        track(tracked);
+        mpstick(tracked);
 
     }
 
@@ -55,7 +55,7 @@ var tracked = 0;
     {
         print("I see someone! On mp1");
         var tracked = 1;
-        track(tracked);
+        mpstick(tracked);
 
     }
 
@@ -63,7 +63,7 @@ var tracked = 0;
     {
         print("I see someone! On mp2");
         var tracked = 2;
-track(tracked);
+        mpstick(tracked);
 
     }
 
@@ -71,7 +71,7 @@ track(tracked);
     {
         print("I see someone! On mp3");
         var tracked = 3;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -79,7 +79,7 @@ track(tracked);
     {
         print("I see someone!"); # lol too much work to make it say mp4~18 
         var tracked = 4;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -87,7 +87,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 5;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -95,7 +95,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 6;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -103,7 +103,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 7;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -111,7 +111,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 8;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -119,7 +119,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 9;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -127,7 +127,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 10;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -135,7 +135,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 11;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -143,7 +143,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 12;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -151,7 +151,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 13;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -159,7 +159,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 14;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -167,7 +167,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 15;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -175,7 +175,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 16;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -183,7 +183,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 17;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -191,7 +191,7 @@ track(tracked);
     {
         print("I see someone!");
         var tracked = 18;
-track(tracked);
+mpstick(tracked);
 
     }
 
@@ -210,7 +210,7 @@ else {
 }
 
 
-var track = func(mpid){
+var mpstick2 = func(mpid){
 
     print(mpid);
     print(getprop("ai/models/multiplayer[" ~ mpid ~ "]/callsign")); # We found our threat
@@ -226,11 +226,21 @@ var track = func(mpid){
 
 var mpstick = func(mpid){
 
+mpid = mpid - 1;
+
 # Copilot can control the plane
-    setprop("/controls/flight/aileron",getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[4]"));
-    setprop("/controls/flight/elevator",getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[3]"));
-    setprop("/controls/flight/rudder",getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[5]"));
-    setprop("/controls/engines/throttle-all",getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[6]"));
+
+var ail = getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[4]");
+var elev = getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[3]");
+var rud = getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[5]");
+var throt = getprop("/ai/models/multiplayer[" ~ mpid ~ "]/sim/multiplay/generic/float[6]");
+print(ail);
+
+
+    setprop("/controls/flight/aileron", ail);
+    setprop("/controls/flight/elevator", elev);
+    setprop("/controls/flight/rudder", rud);
+    setprop("/controls/engines/throttle-all", throt);
 }
 
 

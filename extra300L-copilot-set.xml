@@ -28,7 +28,7 @@
 
                 <float n="3" type="float" alias="/controls/flight/elevator"/>
                 <float n="4" type="float" alias="/controls/flight/aileron"/> 
-                <float n="6" type="float" alias="/controls/engines/engine/throttle-all"/> 
+                <float n="6" type="float" alias="/controls/engines/engine/throttle"/> 
                 <float n="5" type="float" alias="/controls/flight/rudder"/> 
       </generic>
     </multiplay>

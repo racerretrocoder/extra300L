@@ -5,31 +5,10 @@
  <path>tach.ac</path>
 
 
- <animation>
-  <type>rotate</type>
-  <object-name>Needle</object-name>
-  <property>/engines/engine[0]/rpm</property>
-  <interpolation>
-   <entry><ind>  0.0</ind><dep>-128.6 </dep></entry>     
-   <entry><ind>  0.1</ind><dep>-123.85</dep></entry>     
-   <entry><ind>  500.0</ind><dep> -92.85</dep></entry>     
-   <entry><ind> 1000.0</ind><dep> -57.1 </dep></entry>     
-   <entry><ind> 1500.0</ind><dep> -21.1 </dep></entry>     
-   <entry><ind> 2000.0</ind><dep>  15.4 </dep></entry>     
-   <entry><ind> 2500.0</ind><dep>  51.4 </dep></entry>     
-   <entry><ind> 3000.0</ind><dep>  87.4 </dep></entry>     
-   <entry><ind> 3500.0</ind><dep> 123.4 </dep></entry>     
-  </interpolation>
-  <axis>
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
 <animation>
     <type>material</type>
   <object-name>Face</object-name>
-  <object-name>Needle</object-name>
+
 
     <emission>
       <factor-prop>systems/electrical/suppliers/alternator</factor-prop>
@@ -39,6 +18,99 @@
     </emission>
   </animation> 
 
+
+
+
+<animation>
+    <type>material</type>
+  <object-name>rpm2</object-name>
+
+
+    <emission>
+
+      <red>   0.0 </red>
+      <green> 1 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation> 
+
+<!--Y is Left to right
+X is In and Out 
+Z is Up and down-->
+ <text>
+  <name>rpm2</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.007</character-size>
+  <offsets>
+ <x-m>0.003</x-m>
+   <y-m>-0.015</y-m>
+   <z-m>0.005</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">number-value</type>
+   <format type="string">%5.0f</format>
+  <truncate type="bool">true</truncate>
+  <property>engines/engine/rpm</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+  <animation>
+    <type>select</type>
+    <object-name>rpm2</object-name>
+    <condition>
+      <greater-than>
+       <property>engines/engine/rpm</property>
+       <value>200</value>
+      </greater-than>
+
+    </condition>
+  </animation>
+
+ <!--Lights-->
+
+
+  <animation>
+    <type>select</type>
+    <object-name>g</object-name>
+    <condition>
+      <greater-than>
+       <property>engines/engine/rpm</property>
+       <value>200</value>
+      </greater-than>
+      <less-than>
+       <property>engines/engine/rpm</property>
+       <value>2399</value>
+      </less-than>
+
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>y</object-name>
+    <condition>
+      <greater-than>
+       <property>engines/engine/rpm</property>
+       <value>2399</value>
+      </greater-than>
+      <less-than>
+       <property>engines/engine/rpm</property>
+       <value>2700</value>
+      </less-than>
+
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>r</object-name>
+    <condition>
+      <greater-than>
+       <property>engines/engine/rpm</property>
+       <value>2699</value>
+      </greater-than>
+
+    </condition>
+  </animation>
 </PropertyList>
 
 

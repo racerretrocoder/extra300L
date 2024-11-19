@@ -40,5 +40,24 @@
   </animation> 
 
 
+  <animation>
+    <type>rotate</type>
+    <object-name>needleFS</object-name>
+    <property>engines/engine/oil-temperature-degf</property>
+    <factor> 0.3</factor>
+    <axis>
+    <object-name>tempaxis</object-name>
+    </axis>
+  </animation>
+    <animation>
+    <type>rotate</type>
+    <object-name>needleTF</object-name>
+    <property>engines/engine/oil-pressure-psi</property>
+    <factor>-1.32</factor>
+    <axis>
+    <object-name>psiaxis</object-name>
+    </axis>
+  </animation>
+
 </PropertyList>
 

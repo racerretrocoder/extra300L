@@ -10,8 +10,8 @@ This is an aeio-540 300 hp
   <displacement unit="IN3">540</displacement>
   <maxhp>300.00</maxhp>
   <cycles>4.0</cycles>
-  <idlerpm>400.0</idlerpm>
-  <maxrpm>3700.0</maxrpm>
+  <idlerpm>300.0</idlerpm>
+  <maxrpm>2700.0</maxrpm>
   
   <bore unit="IN"> 5.125 </bore>
   <stroke unit="IN">4.375 </stroke>
